@@ -17,12 +17,13 @@ public class AttachmentTest {
     private static final String REPOSITORY = "janemiro/qa_guru_9_6";
 
     @Test
-    public byte[] TestLambda() {
+    public void TestLambda() {
         AllureLifecycle lifecycle = Allure.getLifecycle();
 
         step("Open main page", () -> {
             open("https://github.com");
         });
+
         step("Look for repo" + REPOSITORY, () -> {
             $(".header-search-input").click();
             $(".header-search-input").sendKeys("janemiro/qa_guru_9_6");
@@ -30,6 +31,7 @@ public class AttachmentTest {
             lifecycle.addAttachment("Screenshot", "image/png", "png", takeScreenshot());
         });
     }
+
 private byte[] takeScreenshot(){
     final WebDriver driver = WebDriverRunner.getWebDriver();
     return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);

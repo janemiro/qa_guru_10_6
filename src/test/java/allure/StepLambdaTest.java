@@ -20,12 +20,12 @@ public class StepLambdaTest {
         step("Open main page", () -> {
             open("https://github.com");
         });
-        step("Look for repo" + REPOSITORY, () -> {
+        step("Look for repo " + REPOSITORY, () -> {
             $(".header-search-input").click();
             $(".header-search-input").sendKeys("janemiro/qa_guru_9_6");
             $(".header-search-input").submit();
         });
-        step("Go into repo" + REPOSITORY, () -> {
+        step("Go into repo " + REPOSITORY, () -> {
             $(linkText("janemiro/qa_guru_9_6")).click();
         });
         step("Open tab Issues", () -> {

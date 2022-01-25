@@ -14,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 
 public class AttachmentTest {
 
-    private static final String REPOSITORY = "janemiro/qa_guru_9_6";
+    private static final String REPOSITORY = "janemiro/qa_guru_10_6";
 
     @Test
     public void TestLambda() {
@@ -26,7 +26,7 @@ public class AttachmentTest {
 
         step("Look for repo " + REPOSITORY, () -> {
             $(".header-search-input").click();
-            $(".header-search-input").sendKeys("janemiro/qa_guru_9_6");
+            $(".header-search-input").sendKeys("janemiro/qa_guru_10_6");
             $(".header-search-input").submit();
             lifecycle.addAttachment("Screenshot", "image/png", "png", takeScreenshot());
         });

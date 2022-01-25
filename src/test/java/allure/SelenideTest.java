@@ -22,10 +22,10 @@ public class SelenideTest {
         open("https://github.com");
 
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys("janemiro/qa_guru_9_6");
+        $(".header-search-input").sendKeys("janemiro/qa_guru_10_6");
         $(".header-search-input").submit();
 
-        $(linkText("janemiro/qa_guru_9_6")).click();
+        $(linkText("janemiro/qa_guru_10_6")).click();
         $(partialLinkText("Issues")).click();
         $(withText("Televiffffzor")).should(Condition.visible);
     }

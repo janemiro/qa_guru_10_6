@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class StepAnnotatedTest {
 
-    private static final String REPOSITORY = "janemiro/qa_guru_9_6";
+    private static final String REPOSITORY = "janemiro/qa_guru_10_6";
     private static final String ISSUE_NAME = "Telefffizor";
 
 

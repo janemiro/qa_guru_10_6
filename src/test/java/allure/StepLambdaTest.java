@@ -12,7 +12,7 @@ import static org.openqa.selenium.By.partialLinkText;
 
 public class StepLambdaTest {
 
-    private static final String REPOSITORY = "janemiro/qa_guru_9_6";
+    private static final String REPOSITORY = "janemiro/qa_guru_10_6";
     private static final String ISSUE_NAME = "Telefffizor";
 
     @Test
@@ -22,11 +22,11 @@ public class StepLambdaTest {
         });
         step("Look for repo " + REPOSITORY, () -> {
             $(".header-search-input").click();
-            $(".header-search-input").sendKeys("janemiro/qa_guru_9_6");
+            $(".header-search-input").sendKeys("janemiro/qa_guru_10_6");
             $(".header-search-input").submit();
         });
         step("Go into repo " + REPOSITORY, () -> {
-            $(linkText("janemiro/qa_guru_9_6")).click();
+            $(linkText("janemiro/qa_guru_10_6")).click();
         });
         step("Open tab Issues", () -> {
             $(partialLinkText("Issues")).click();

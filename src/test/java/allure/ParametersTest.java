@@ -7,7 +7,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 
 public class ParametersTest {
-    @DisplayName("Check of")
     @ParameterizedTest(name = "{displayName} {0}")
     @ValueSource(strings = {"Los Angeles", "Berlin"})
     public void testLambda(String city) {
